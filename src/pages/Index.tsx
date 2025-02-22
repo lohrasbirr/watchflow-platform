@@ -17,7 +17,7 @@ const mockContent = Array.from({ length: 10 }, (_, i) => ({
   id: String(i + 1),
   title: `Content Title ${i + 1}`,
   image: "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0",
-  type: i % 2 === 0 ? "movie" : "series",
+  type: (i % 2 === 0 ? "movie" : "series") as "movie" | "series",
   year: 2021 + Math.floor(i / 3),
 }));
 
